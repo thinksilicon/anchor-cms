@@ -30,7 +30,8 @@
     <fieldset class="main">
         <div class="wrap">
             <?php echo Form::textarea('markdown', Input::previous('markdown'), array(
-                'placeholder' => __('posts.content_explain')
+                'placeholder' => __('posts.content_explain'),
+                'id' => 'content'
             )); ?>
 
             <?php echo $editor; ?>
@@ -90,8 +91,8 @@
 <script src="<?php echo asset('anchor/views/assets/js/text-resize.js'); ?>"></script>
 <script src="<?php echo asset('anchor/views/assets/js/editor.js'); ?>"></script>
 <script src="<?php echo asset('anchor/views/assets/js/autosave.js'); ?>"></script>
-<script>
+<!--<script>
     $('textarea[name=markdown]').editor();
-</script>
+</script>-->
 
 <?php echo $footer; ?>

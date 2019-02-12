@@ -38,7 +38,8 @@
   <fieldset class="main">
     <div class="wrap">
         <?php echo Form::textarea('markdown', Input::previous('markdown', $article->markdown), [
-            'placeholder' => __('posts.content_explain')
+            'placeholder' => __('posts.content_explain'),
+            'id' => 'content'
         ]); ?>
 
         <?php echo $editor; ?>
@@ -108,7 +109,7 @@
 <script src="<?php echo asset('anchor/views/assets/js/change-saver.js'); ?>"></script>
 <script src="<?php echo asset('anchor/views/assets/js/autosave.js'); ?>"></script>
 <script>
-  $( 'textarea[name=markdown]' ).editor();
+//  $( 'textarea[name=markdown]' ).editor();
   $( 'form' ).changeSaver( 'textarea[name=markdown]' );
 </script>
 

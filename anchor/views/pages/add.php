@@ -41,7 +41,8 @@
   <fieldset class="main">
     <div class="wrap">
         <?php echo Form::textarea('markdown', Input::previous('markdown'), [
-            'placeholder' => __('pages.content_explain')
+            'placeholder' => __('pages.content_explain'),
+            'id' => 'content'
         ]); ?>
 
         <?php echo $editor; ?>
@@ -112,7 +113,7 @@
 <script src="<?php echo asset('anchor/views/assets/js/editor.js'); ?>"></script>
 <script src="<?php echo asset('anchor/views/assets/js/autosave.js'); ?>"></script>
 <script>
-  $( 'textarea[name=markdown]' ).editor();
+//  $( 'textarea[name=markdown]' ).editor();
   $( '#pagetype' ).on( 'change', function () {
     var $this = $( this );
     $.post( "<?php echo Uri::to('admin/get_fields'); ?>", {
