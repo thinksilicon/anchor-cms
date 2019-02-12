@@ -1,5 +1,15 @@
 ![Anchor Header Image](.github/anchor-bg.jpeg)
 
+# Changes by Thinksilicon
+
+- Switched the default-editor to TinyMCE 4.9.3 (https://www.tiny.cloud/get-tiny/self-hosted/ )
+- Integrated Roxy Fileman 1.4.5 (http://roxyfileman.com/download )
+
+After installing this fork to your system, edit anchor/views/assets/js/plugins/fileman/config.js and
+make sure to setup your domain in RETURN_URL_PREFIX
+
+All requests to fileman will be authenticated using auth-test.php
+
 # Anchor CMS
 
 Anchor is a super-simple, lightweight blog system, made to let you just write. [Check out the site](http://anchorcms.com/) or checkout the [documentation here](http://docs.anchorcms.com/).
