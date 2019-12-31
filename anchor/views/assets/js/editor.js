@@ -205,6 +205,13 @@
 	// AJAX form submit
 	form.on('submit', function() {
 		var data = {};
+
+		// check if tinyMCE has been initialized
+		if( typeof( tinyMCE.activeEditor.contentDocument ) !== "undefined" ) {
+			// needed to prevent losing changes.
+			tinyMCE.triggerSave();
+		}
+
 		$.each($(this).serializeArray(), function(_, kv) {
 		  data[kv.name] = kv.value;
 		});
